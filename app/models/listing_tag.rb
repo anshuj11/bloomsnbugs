@@ -1,0 +1,2 @@
+class ListingTag < ApplicationRecord
+end

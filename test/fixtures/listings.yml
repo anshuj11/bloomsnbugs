@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  'null': MyString
+  'false': MyString
+  description: 
+  'null': MyString
+  'false': MyString
+  price: 
+  'null': MyString
+  'false': MyString
+
+two:
+  title: 
+  'null': MyString
+  'false': MyString
+  description: 
+  'null': MyString
+  'false': MyString
+  price: 
+  'null': MyString
+  'false': MyString
