@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
 import listingsReducer from "./ listings_reducer";
-import sessionReducer from "./session_reducer";
+import usersReducer from "./users_reducer";
+
 const entitiesReducer = combineReducers({
-  sessionReducer,
-  listingsReducer
+  listings: listingsReducer,
+  users: usersReducer
 });
 
 export default entitiesReducer;
