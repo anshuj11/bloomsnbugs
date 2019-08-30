@@ -17,10 +17,11 @@
 
 .FormFields {
   margin: 10px;
-  color: lightgrey;
+  color: grey;
   border: none;
   width: 80%;
   height: 20px;
+  background-color: rgb(223, 236, 232);
 }
 
 .SessionButton {
@@ -29,8 +30,13 @@
   height: 30px;
   color: white;
   align-content: center;
+
   //justify-content: center;
   margin-left: 50px;
   margin-top: 30px;
   font-size: 15px;
+}
+
+.ErrMsg {
+  color: red;
 }
