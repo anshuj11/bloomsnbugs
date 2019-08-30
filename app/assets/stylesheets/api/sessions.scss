@@ -1,3 +1,36 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.SessionForm {
+  display: flex;
+  color: grey;
+  flex-direction: column;
+  width: 200px;
+  height: 150px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  border: solid lightgrey 1px;
+}
+
+.FormFields {
+  margin: 10px;
+  color: lightgrey;
+  border: none;
+  width: 80%;
+  height: 20px;
+}
+
+.SessionButton {
+  background-color: orangered;
+  width: 80px;
+  height: 30px;
+  color: white;
+  align-content: center;
+  //justify-content: center;
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: 15px;
+}
