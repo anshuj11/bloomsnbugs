@@ -7,8 +7,11 @@ import { bindActionCreators } from "redux";
 const errorsReducer = (state = [], action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_SESSION_ERRORS:
+    case RECEIVE_SESSION_ERRORS: {
+      debugger;
       return action.errors;
+    }
+
     case RECEIVE_USER:
       return [];
     default:

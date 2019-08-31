@@ -1,15 +1,28 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import SignupFormContainer from "../session/signupFormContainer";
 import LoginFormContainer from "../session/loginFormContainer";
 
 const Greeting = props => {
-  if (props.currentUser) return <h3>return {props.currentUser.username}</h3>;
-  else {
+  console.log("Props: in top", props);
+
+  if (props.currentUser) {
+    console.log("Props: in if", props);
     return (
       <div>
-        <Route path="/signup" component={SignupFormContainer} />
-        <Route path="/login" component={LoginFormContainer} />
+        <h3> {props.currentUser.email} </h3>
+        <button className="SessionButton" onClick={props.logout}>
+          Logout
+        </button>
+      </div>
+    );
+  } else {
+    console.log("Props: in else", props);
+
+    return (
+      <div className="LoginSignUpLinks">
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Register</Link>
       </div>
     );
   }
