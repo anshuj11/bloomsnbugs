@@ -42,7 +42,9 @@ class ListingForm extends React.Component {
   }
 
   render() {
-      const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className="ListingPhoto"/> : null;
+    const preview = this.state.photoUrl ? (
+      <img src={this.state.photoUrl} className="ListingImage" />
+    ) : null;
     return (
       <form name="listingForm">
         <label name="Listing Title">
@@ -59,8 +61,8 @@ class ListingForm extends React.Component {
         </label>
         <label name="Photo">
           <input type="file" onChange={this.handleFile.bind(this)}></input>
-            </label>
-            {preview}
+        </label>
+        {preview}
         <button onClick={this.handleSubmit} className="SessionButton">
           Publish
         </button>

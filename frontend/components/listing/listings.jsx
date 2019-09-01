@@ -9,14 +9,14 @@ class Listings extends React.Component {
   }
   render() {
     const listings_arr = Object.keys(this.props.listings).map(id => (
-      <li key={id} className="Listing">{this.props.listings[id].title}</li>
+      <li key={id} className="Listing">
+        {/* {this.props.listings[id].title} */}
+            <img src={this.props.listings[id].photoUrl} className="ListingImage"/>
+      </li>
     ));
     return (
       <div>
-            <ul className="ListingsGrid">
-                
-          {listings_arr}
-        </ul>
+        <ul className="ListingsGrid">{listings_arr}</ul>
       </div>
     );
   }
