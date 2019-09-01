@@ -6,10 +6,23 @@ class ListingForm extends React.Component {
     this.state = {
       title: "",
       description: "",
-      price: ""
+      price: "",
+      photoFile: null,
+      photoUrl: null
     };
     //this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
   handleChange(type) {
     return e => {
@@ -18,15 +31,18 @@ class ListingForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    const listing = Object.assign({}, this.state);
-    console.log("inside listing submit: Listing: ", listing);
+    const formData = new FormData();
+    formData.append("listing[title]", this.state.title);
+    formData.append("listing[description]", this.state.description);
+    formData.append("listing[price]", this.state.price);
+    formData.append("listing[photo]", this.state.photoFile);
     var form = document.getElementsByName("listingForm")[0];
-    this.props.submitListing(listing);
+    this.props.submitListing(formData);
     form.reset();
   }
 
   render() {
-    console.log("inside listing form render");
+      const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className="ListingPhoto"/> : null;
     return (
       <form name="listingForm">
         <label name="Listing Title">
@@ -39,8 +55,12 @@ class ListingForm extends React.Component {
           ></input>
         </label>
         <label name="Price">
-          <input type="price" onChange={this.handleChange("price")}></input>
+          <input type="text" onChange={this.handleChange("price")}></input>
         </label>
+        <label name="Photo">
+          <input type="file" onChange={this.handleFile.bind(this)}></input>
+            </label>
+            {preview}
         <button onClick={this.handleSubmit} className="SessionButton">
           Publish
         </button>

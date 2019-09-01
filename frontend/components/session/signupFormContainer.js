@@ -10,7 +10,6 @@ const msp = state => {
 };
 
 const mdp = (dispatch, ownProps) => {
-  console.log("inside MSD: signupFormContainer");
 
   return {
     processForm: user => dispatch(signup(user))

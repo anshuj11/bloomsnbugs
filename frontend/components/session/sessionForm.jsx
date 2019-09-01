@@ -12,7 +12,6 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    console.log("inside handle submit");
     var frm = document.getElementsByName("sessionForm")[0];
     this.props.processForm(user);
     frm.reset();

@@ -4,7 +4,6 @@ export const DELETE_LISTING = "DELETE_LISTING";
 import * as ListingAPIUtil from "../util/listing_api_util";
 
 export const receiveAllListings = listings => {
-  console.log("listings: ", listings);
   return {
     type: RECEIVE_ALL_LISTINGS,
     listings
@@ -36,7 +35,6 @@ export const requestListing = id => dispatch =>
   );
 
 export const createListing = listingFormData => dispatch => {
-  console.log("ListingFormData: ", listingFormData);
   ListingAPIUtil.createListing(listingFormData).then(listing =>
     dispatch(receiveListing(listing))
   );

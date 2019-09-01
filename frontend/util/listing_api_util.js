@@ -1,10 +1,11 @@
 export const createListing = body => {
+  //("Listing_Util, body: ", body)
   return $.ajax({
     method: "POST",
     url: "/api/listings",
-    data: {
-      listing: { title: body.title, description: body.description, price: body.price }
-    }
+    data: body,
+    contentType: false,
+    processData: false
   });
 };
 
@@ -23,8 +24,8 @@ export const fetchAllListings = () => {
 };
 
 export const deleteListing = id => {
-    return $.ajax({
-        method: "DELETE",
-        url: "/api/listings/" + id
-    });
+  return $.ajax({
+    method: "DELETE",
+    url: "/api/listings/" + id
+  });
 };
