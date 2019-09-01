@@ -3,7 +3,7 @@ export const createListing = body => {
     method: "POST",
     url: "/api/listings",
     data: {
-      listing: { title: body.title, description: body.description, price: 49 }
+      listing: { title: body.title, description: body.description, price: body.price }
     }
   });
 };
