@@ -4,20 +4,23 @@
 
 .ListingsGrid {
   display: grid;
-  grid-template-columns: 20% 20% 20%;
+  grid-template-columns: 33% 33% 33%;
   grid-template-rows: 50% 50%;
 }
 
 .Listing {
   display: flex;
-  width: 150px;
-  height: 150px;
-  border: solid black 1px;
+  width: 175px;
+  height: 175px;
+  border: none;
   margin: 20px;
   border-radius: 8px;
+  border: 1px solid black;
+  display: flex;
 }
 
 .ListingImage {
   width: 150px;
+  border-radius: 8px;
   height: 150px;
 }
