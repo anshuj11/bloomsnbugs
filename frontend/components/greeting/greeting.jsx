@@ -12,7 +12,7 @@ const Greeting = props => {
             <h2>Welcome {props.currentUser.email} </h2>
           </div>
           <div className="LoginSignUpLinks">
-            <Link to="/listings/new" className="Links">
+            <Link to="/listing/new" className="Links">
               Create A Listing
             </Link>
             <button className="SessionButton" onClick={props.logout}>
