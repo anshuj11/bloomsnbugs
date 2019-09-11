@@ -26,15 +26,14 @@
 
 .SessionButton {
   background-color: orangered;
-  width: 80px;
-  height: 30px;
+  width: 100px;
+  height: 40px;
   color: white;
-  align-content: center;
+  align-content: cen ter;
 
   //justify-content: center;
-  margin-left: 50px;
-  margin-top: 30px;
-  font-size: 15px;
+  margin: 20px 20px 5px 20px;
+  font-size: 20px;
 }
 
 .ErrMsg {
@@ -42,8 +41,38 @@
 }
 
 .LoginSignUpLinks {
+  width: 30%;
+  height: 80px;
   display: flex;
+  //flex-direct ion: row;
+  align-items: flex-end;
+  justify-content: left;
+  //border: 1px solid black;
 }
 .Links {
-  margin: 20px;
+  margin: 20px 20px 5px 20px;
+  font-size: 20px;
+}
+
+.Navbar {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: orange;
+}
+.HeaderText {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+}
+.Header {
+  color: whitesmoke;
+  font-size: 40px;
+  margin: 0px;
+}
+
+.fa-shopping-cart {
+  font-size: 30px;
 }

@@ -6,18 +6,17 @@ import LoginFormContainer from "./session/loginFormContainer";
 import AuthRoute from "../util/route_util";
 import ListingFormContainer from "./listing/listingFormContainer";
 import ListingsContainer from "./listing/listingsContainer";
+//import Navbar from "./navbar/navbarContainer";
 
 const App = function() {
   return (
     <div>
-      <h1>Blooms And Bugs </h1>
-      <h2>Beautiful, unique, handmade in USA </h2>
-
+      {/* <Navbar /> */}
       <GreetingContainer />
+      <Route exact path="/" component={ListingsContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <Route exact path="/listings/new" component={ListingFormContainer} />
-      <Route exact path="/" component={ListingsContainer} />
     </div>
   );
 };

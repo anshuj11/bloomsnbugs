@@ -6,23 +6,40 @@ const Greeting = props => {
   if (props.currentUser) {
     return (
       <div>
-        <h3>Welcome {props.currentUser.email} </h3>
+        <div className="Navbar">
+          <div className="HeaderText">
+            <h1 className="Header">Blooms And Bugs </h1>
+            <h2>Welcome {props.currentUser.email} </h2>
+          </div>
+          <div className="LoginSignUpLinks">
+            <Link to="/listings/new" className="Links">
+              Create A Listing
+            </Link>
+            <button className="SessionButton" onClick={props.logout}>
+              Logout
+            </button>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
         <ListingsContainer />
-        <Link to="/listings/new">Create A Listing</Link>
-        <button className="SessionButton" onClick={props.logout}>
-          Logout
-        </button>
       </div>
     );
   } else {
     return (
-      <div className="LoginSignUpLinks">
-        <Link to="/login" className="Links">
-          Login
-        </Link>
-        <Link to="/signup" className="Links">
-          Register
-        </Link>
+      <div className="Navbar">
+        <div className="HeaderText">
+          <h1 className="Header">Blooms And Bugs </h1>
+          <h2 className="Byline">Beautiful, unique, handmade in USA </h2>
+        </div>
+        <div className="LoginSignUpLinks">
+          <Link to="/login" className="Links">
+            Login
+          </Link>
+          <Link to="/signup" className="Links">
+            Register
+          </Link>
+          <i class="fas fa-shopping-cart"></i>
+        </div>
       </div>
     );
   }
