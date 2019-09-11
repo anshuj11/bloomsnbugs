@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Listings extends React.Component {
   constructor(props) {
@@ -11,7 +12,9 @@ class Listings extends React.Component {
     const listings_arr = Object.keys(this.props.listings).map(id => (
       <li key={id} className="Listing">
         {/* {this.props.listings[id].title} */}
-            <img src={this.props.listings[id].photoUrl} className="ListingImage"/>
+        <img src={this.props.listings[id].photoUrl} className="ListingImage" />
+        <a href={`/listings/${id}`}>{this.props.listings[id].title}</a>
+        <Link to={`/listings/${id}`}>{this.props.listings[id].title}</Link>
       </li>
     ));
     return (

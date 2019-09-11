@@ -38,7 +38,7 @@ const Greeting = props => {
           <Link to="/signup" className="Links">
             Register
           </Link>
-          <i class="fas fa-shopping-cart"></i>
+          <i className="fas fa-shopping-cart"></i>
         </div>
       </div>
     );

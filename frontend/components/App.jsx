@@ -6,6 +6,7 @@ import LoginFormContainer from "./session/loginFormContainer";
 import AuthRoute from "../util/route_util";
 import ListingFormContainer from "./listing/listingFormContainer";
 import ListingsContainer from "./listing/listingsContainer";
+import ListingContainer from "./listing/listing";
 //import Navbar from "./navbar/navbarContainer";
 
 const App = function() {
@@ -17,6 +18,7 @@ const App = function() {
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <Route exact path="/listings/new" component={ListingFormContainer} />
+      <Route exact path="/listings/:id" component={ListingContainer} />
     </div>
   );
 };
