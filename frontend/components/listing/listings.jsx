@@ -13,7 +13,7 @@ class Listings extends React.Component {
       <li key={id} className="Listing">
         {/* {this.props.listings[id].title} */}
         <img src={this.props.listings[id].photoUrl} className="ListingImage" />
-        <a href={`/listings/${id}`}>{this.props.listings[id].title}</a>
+        <br />
         <Link to={`/listings/${id}`}>{this.props.listings[id].title}</Link>
       </li>
     ));
