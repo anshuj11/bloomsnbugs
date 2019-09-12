@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import GreetingContainer from "./greeting/greeting_container";
 import SignupFormContainer from "./session/signupFormContainer";
 import LoginFormContainer from "./session/loginFormContainer";
@@ -13,14 +13,15 @@ import CartContainer from "./cart/cart";
 const App = function() {
   return (
     <div>
-      {/* <Navbar /> */}
       <GreetingContainer />
-      <Route exact path="/" component={ListingsContainer} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <Route exact path="/listings/:id" component={ListingContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route exact path="/listing/new" component={ListingFormContainer} />
-      <Route exact path="/cart" component={CartContainer} />
+      <Switch>
+        <Route exact path="/" component={ListingsContainer} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <Route path="/listings/:id" component={ListingContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <Route path="/listing/new" component={ListingFormContainer} />
+        <Route exact path="/cart" component={CartContainer} />
+      </Switch>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ListingsContainer from "../listing/listingsContainer";
 
 const Greeting = props => {
   if (props.currentUser) {
@@ -15,13 +14,20 @@ const Greeting = props => {
             <Link to="/listing/new" className="Links">
               Create A Listing
             </Link>
+            <Link to="/" className="Links">
+              Browse Listings
+            </Link>
             <button className="SessionButton" onClick={props.logout}>
               Logout
             </button>
-            <Link to="/cart" className="fas fa-shopping-cart"></Link>
+            <div className="Cart">
+              <div className="Notification">
+                {props.itemsInCart ? props.itemsInCart : 0}
+              </div>
+              <Link to="/cart" className="fas fa-shopping-cart"></Link>
+            </div>
           </div>
         </div>
-        <ListingsContainer />
       </div>
     );
   } else {

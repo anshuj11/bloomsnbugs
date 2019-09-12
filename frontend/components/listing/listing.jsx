@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { requestListing } from "../../actions/listing_actions";
 import { addToCart } from "../../actions/cart_actions";
 
@@ -21,6 +22,7 @@ class Listing extends React.Component {
         <button className="SessionButton" onClick={this.handleClick.bind(this)}>
           Add to Cart
         </button>
+        <Link to="/">Browse Listings</Link>
         <div>{this.props.listing.description}</div>
       </div>
     );

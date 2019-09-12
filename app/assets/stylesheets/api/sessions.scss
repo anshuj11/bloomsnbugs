@@ -76,4 +76,18 @@
 
 .fa-shopping-cart {
   font-size: 30px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.Notification {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  margin: 0px;
+}
+.Cart {
+  display: flex;
+  flex-direction: column;
 }
