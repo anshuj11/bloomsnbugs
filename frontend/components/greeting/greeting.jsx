@@ -18,7 +18,7 @@ const Greeting = props => {
             <button className="SessionButton" onClick={props.logout}>
               Logout
             </button>
-            <i className="fas fa-shopping-cart"></i>
+            <Link to="/cart" className="fas fa-shopping-cart"></Link>
           </div>
         </div>
         <ListingsContainer />
