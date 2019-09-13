@@ -12,7 +12,12 @@ class Listings extends React.Component {
     const listings_arr = Object.keys(this.props.listings).map(id => (
       <li key={id} className="Listing">
         {/* {this.props.listings[id].title} */}
-        <img src={this.props.listings[id].photoUrl} className="ListingImage" />
+        <Link to={`/listings/${id}`}>
+          <img
+            src={this.props.listings[id].photoUrl}
+            className="ListingImage"
+          />
+        </Link>
         <br />
         <Link to={`/listings/${id}`}>{this.props.listings[id].title}</Link>
       </li>
