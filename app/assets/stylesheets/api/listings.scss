@@ -48,7 +48,9 @@
   align-content: center;
 
   //justify-content: center;
-  margin: 20px 20px 5px 20px;
+  margin: 20px 20px 5px 0px;
+
+  padding: 1px 7px 1px 0px;
   font-size: 20px;
   border-radius: 5px;
 }
@@ -58,4 +60,15 @@
   flex-direction: column;
   font-size: 20px;
   margin: 20px 40px;
+}
+
+.fa-heart {
+  font-size: 30px;
+  margin: 0px;
+  padding: 0px;
+  color: red;
+}
+
+.Price {
+  font-weight: bold;
 }

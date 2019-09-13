@@ -19,11 +19,12 @@ class Listing extends React.Component {
       <div className="ListingBox">
         <img src={this.props.listing.photoUrl} className="ListingImageBig" />
         <div className="ListingDetails">
-        <div>Price: ${this.props.listing.price}</div>
-        <button className="CartButton" onClick={this.handleClick.bind(this)}>
-          Add to Cart
-        </button>
-        <Link to="/">Browse Listings</Link>
+          <div className="Price">Price: ${this.props.listing.price}</div>
+          <button className="CartButton" onClick={this.handleClick.bind(this)}>
+            Add to Cart
+          </button>
+          <p className="fas fa-heart"></p>
+          <Link to="/">Browse Listings</Link>
           <div>{this.props.listing.description}</div>
         </div>
       </div>
