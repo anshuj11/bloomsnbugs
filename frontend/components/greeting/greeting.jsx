@@ -44,11 +44,27 @@ const Greeting = props => {
           <Link to="/signup" className="Links">
             Register
           </Link>
+          <button
+            className="SessionButton"
+            onClick={e => submitDemoUser(e, props)}
+          >
+            Demo
+          </button>
           <i className="fas fa-shopping-cart"></i>
         </div>
       </div>
     );
   }
+};
+
+const submitDemoUser = function(e, props) {
+  e.preventDefault();
+  const user = Object.assign(
+    {},
+    { email: "demouser@demo.com", password: "123456" }
+  );
+  props.login(user);
+  props.history.push("/");
 };
 
 export default Greeting;

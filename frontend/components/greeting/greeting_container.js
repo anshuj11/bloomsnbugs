@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Greeting from "./greeting";
-import { logout } from "../../actions/session_actions";
+import { logout, login } from "../../actions/session_actions";
 import { getCart } from "../../actions/cart_actions";
 
 const msp = state => {
@@ -13,6 +13,7 @@ const msp = state => {
 const mdp = dispatch => {
   return {
     logout: () => dispatch(logout()),
+    login: user => dispatch(login(user)),
     getCart: () => dispatch(getCart())
   };
 };

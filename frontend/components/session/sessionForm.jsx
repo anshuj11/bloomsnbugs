@@ -18,6 +18,8 @@ class SessionForm extends React.Component {
     this.props.history.push("/");
   }
 
+  
+
   handleChange(type) {
     return e => {
       this.setState({ [type]: e.target.value });
@@ -49,6 +51,7 @@ class SessionForm extends React.Component {
           <button className="SessionButton" onClick={e => this.handleSubmit(e)}>
             {this.props.formType}
           </button>
+          
         </div>
       </form>
     );
