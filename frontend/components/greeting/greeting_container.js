@@ -4,7 +4,6 @@ import { logout } from "../../actions/session_actions";
 import { getCart } from "../../actions/cart_actions";
 
 const msp = state => {
-  //    debugger;
   return {
     currentUser: state.session.currentUser,
     itemsInCart: state.entities.cart.length
