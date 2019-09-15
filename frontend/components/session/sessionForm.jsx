@@ -15,7 +15,6 @@ class SessionForm extends React.Component {
     var frm = document.getElementsByName("sessionForm")[0];
     this.props.processForm(user);
     frm.reset();
-    debugger;
     this.props.history.push("/");
   }
 

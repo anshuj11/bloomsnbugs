@@ -26,7 +26,6 @@ const createUser = user => {
 };
 
 const receiveErrors = errors => {
-  debugger;
   return {
     type: RECEIVE_SESSION_ERRORS, //login
     errors
