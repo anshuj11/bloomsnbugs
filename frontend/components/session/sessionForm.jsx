@@ -15,6 +15,8 @@ class SessionForm extends React.Component {
     var frm = document.getElementsByName("sessionForm")[0];
     this.props.processForm(user);
     frm.reset();
+    debugger;
+    this.props.history.push("/");
   }
 
   handleChange(type) {
@@ -23,7 +25,11 @@ class SessionForm extends React.Component {
     };
   }
   renderErrors(errors) {
-    return errors.map(err => <li className="ErrMsg">{err}</li>);
+    return errors.map((err, ind) => (
+      <li className="ErrMsg" key={ind}>
+        {err}
+      </li>
+    ));
   }
   render() {
     return (

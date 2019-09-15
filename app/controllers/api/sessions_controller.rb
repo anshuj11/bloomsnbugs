@@ -5,12 +5,11 @@ class Api::SessionsController < ApplicationController
       params[:user][:email],
       params[:user][:password]
     )
-
     if @user
       sign_in(@user)
       render "api/users/show"
     else
-      render json:["Invalid username or password"]
+      render json:["Invalid username or password"], status: 422
     end
   end
 

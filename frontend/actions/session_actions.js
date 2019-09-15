@@ -20,16 +20,17 @@ const logoutUser = () => {
 
 const createUser = user => {
   return {
-    type: CREATE_USER, //login
+    type: CREATE_USER, //signup
     user
   };
 };
 
 const receiveErrors = errors => {
-    return {
-        type: RECEIVE_SESSION_ERRORS, //login
-        errors
-    };
+  debugger;
+  return {
+    type: RECEIVE_SESSION_ERRORS, //login
+    errors
+  };
 };
 
 export const signup = formUser => dispatch => {
