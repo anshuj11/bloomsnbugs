@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Sidebar from "../sidebar/sidebar_container";
 
 class Listings extends React.Component {
   constructor(props) {
@@ -23,7 +24,8 @@ class Listings extends React.Component {
       </li>
     ));
     return (
-      <div>
+      <div className= "MainPage">
+        <Sidebar/>
         <ul className="ListingsGrid">{listings_arr}</ul>
       </div>
     );

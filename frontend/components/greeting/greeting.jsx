@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Sidebar from "../sidebar/sidebar_container";
 
 const Greeting = props => {
   if (props.currentUser) {
@@ -32,25 +33,27 @@ const Greeting = props => {
     );
   } else {
     return (
-      <div className="Navbar">
-        <div className="HeaderText">
-          <h1 className="Header">Blooms And Bugs </h1>
-          <h2 className="Byline">Beautiful, unique, handmade in USA </h2>
-        </div>
-        <div className="LoginSignUpLinks">
-          <Link to="/login" className="Links">
-            Login
-          </Link>
-          <Link to="/signup" className="Links">
-            Register
-          </Link>
-          <button
-            className="SessionButton"
-            onClick={e => submitDemoUser(e, props)}
-          >
-            Demo
-          </button>
-          <i className="fas fa-shopping-cart"></i>
+      <div>
+        <div className="Navbar">
+          <div className="HeaderText">
+            <h1 className="Header">Blooms And Bugs </h1>
+            <h2 className="Byline">Beautiful, unique, handmade in USA </h2>
+          </div>
+          <div className="LoginSignUpLinks">
+            <Link to="/login" className="Links">
+              Login
+            </Link>
+            <Link to="/signup" className="Links">
+              Register
+            </Link>
+            <button
+              className="SessionButton"
+              onClick={e => submitDemoUser(e, props)}
+            >
+              Demo
+            </button>
+            <i className="fas fa-shopping-cart"></i>
+          </div>
         </div>
       </div>
     );

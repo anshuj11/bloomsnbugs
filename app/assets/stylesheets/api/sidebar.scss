@@ -1,0 +1,21 @@
+.Sidebar {
+  display: flex;
+  width: 200px;
+  height: 800px;
+  background-color: greenyellow;
+}
+
+.SidebarItems {
+  list-style: none;
+  height: 50px;
+  font-size: 24px;
+}
+
+.MainPage {
+  display: flex;
+  border: 1px solid black;
+}
+
+.StandardText {
+  font-size: 24px;
+}
