@@ -7,7 +7,7 @@
   color: grey;
   flex-direction: column;
   width: 200px;
-  height: 150px;
+  height: 200px;
   padding: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -37,6 +37,7 @@
 
 .ErrMsg {
   color: red;
+  list-style: none;
 }
 
 .LoginSignUpLinks {
