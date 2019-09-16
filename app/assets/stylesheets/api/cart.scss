@@ -1,0 +1,58 @@
+.Bill {
+  width: 80%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+  margin-top: 50px;
+}
+
+.ItemList {
+  font-size: 14px;
+}
+
+.ItemInCart {
+  list-style: none;
+}
+
+.Item {
+  display: flex;
+  width: 100%;
+  height: 30px;
+}
+
+.ItemTitle {
+  font-size: 24px;
+  margin: 10px;
+  height: 30px;
+  width: 70%;
+}
+.ItemPrice {
+  font-size: 24px;
+  margin: 10px;
+  height: 30px;
+  width: 30%;
+}
+
+.CartTotal {
+  font-size: 24px;
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.DisabledButton {
+  background-color: grey;
+  width: 100px;
+  height: 40px;
+  color: white;
+  align-content: center;
+
+  //justify-content: center;
+  margin: 20px 20px 5px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}

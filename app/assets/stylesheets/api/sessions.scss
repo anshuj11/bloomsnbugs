@@ -30,8 +30,6 @@
   height: 40px;
   color: white;
   align-content: center;
-
-  //justify-content: center;
   margin: 20px 20px 5px 20px;
   font-size: 20px;
   border-radius: 5px;
@@ -42,13 +40,11 @@
 }
 
 .LoginSignUpLinks {
-  width: 30%;
+  width: 50%;
   height: 80px;
   display: flex;
-  //flex-direct ion: row;
   align-items: flex-end;
-  justify-content: left;
-  //border: 1px solid black;
+  justify-content: center;
 }
 .Links {
   margin: 20px 20px 5px 20px;

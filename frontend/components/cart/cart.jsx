@@ -10,12 +10,24 @@ class Cart extends React.Component {
     this.props.getCart();
   }
   render() {
+    let total = 0;
+    this.props.cart.forEach(item => (total += item.price));
     let newArr = this.props.cart.map((item, idx) => (
-      <li key={idx}>
-        {item.title}, {item.price}
+      <li key={idx} className="ItemInCart">
+        <div className="Item">
+          <div className="ItemTitle">{item.title} </div>
+          <div className="ItemPrice">${item.price} </div>
+        </div>
       </li>
     ));
-    return <ul>{newArr}</ul>;
+    return (
+      <div className="Bill">
+        <ul className="ItemsList">{newArr}</ul>
+        <hr></hr>
+        <div className="CartTotal"> Total: ${total}</div>
+        <button className="DisabledButton">Buy</button>
+      </div>
+    );
   }
 }
 
