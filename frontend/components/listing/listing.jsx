@@ -23,7 +23,7 @@ class Listing extends React.Component {
           <button className="CartButton" onClick={this.handleClick.bind(this)}>
             Add to Cart
           </button>
-          <p className="fas fa-heart"></p>
+          <p className="fas fa-heart" ></p>
           <Link to="/">Browse Listings</Link>
           <div>{this.props.listing.description}</div>
         </div>

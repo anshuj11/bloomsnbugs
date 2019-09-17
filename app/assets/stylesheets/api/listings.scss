@@ -5,7 +5,7 @@
 .ListingsGrid {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 33% 33% 33%;
 }
 
 .Listing {
@@ -66,6 +66,10 @@
   font-size: 30px;
   margin: 0px;
   padding: 0px;
+  color: grey;
+}
+
+.fa-heart:active {
   color: red;
 }
 
