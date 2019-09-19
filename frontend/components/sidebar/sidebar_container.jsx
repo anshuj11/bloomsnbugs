@@ -9,8 +9,14 @@ const Sidebar = () => {
           {" "}
           <Link to="/about">About Us </Link>{" "}
         </li>
-        <li className="SidebarItems">Dresses</li>
-        <li className="SidebarItems">Hair Accessories</li>
+        <li className="SidebarItems">
+          {" "}
+          <Link to="/dresses">Dresses</Link>
+        </li>
+        <li className="SidebarItems">
+          {" "}
+          <Link to="/accessories">Accessories</Link>
+        </li>
       </ul>
     </div>
   );

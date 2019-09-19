@@ -1,8 +1,9 @@
 import { connect } from "react-redux";
 import { requestAllListings } from "../../actions/listing_actions";
-import Listings from "./listings";
+import Dresses from "./dresses";
 
 const msp = ({ entities }) => {
+  //   debugger;
   return {
     listings: entities.listings
   };
@@ -14,4 +15,5 @@ const mdp = dispatch => {
 export default connect(
   msp,
   mdp
-)(Listings);
+)(Dresses);
+

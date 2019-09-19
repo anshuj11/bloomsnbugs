@@ -6,13 +6,14 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 33% 33% 33%;
+  width: 100%;
 }
 
 .Listing {
   display: flex;
   flex-direction: column;
-  width: 175px;
-  height: 175px;
+  min-width: 175px;
+  min-height: 175px;
   border: none;
   margin: 20px 20px 40px 20px;
   border-radius: 8px;
