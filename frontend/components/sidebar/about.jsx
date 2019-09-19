@@ -11,7 +11,7 @@ const About = () => {
           toddler. After sewing a lot of clothes for my own daughter I decide to
           take it to the next level and sell handmade clothes. Blooms and Bugs
           sells unique handmade baby and kids party dresses and costumes. Right
-          now we are offering be autiful tutu dresses, pettiskirts and Halloween
+          now we are offering beautiful tutu dresses, pettiskirts and Halloween
           costumes for little girls in a dazzling array of colors. We also love
           custom orders so do get in touch to get something unique made for your
           little one.
