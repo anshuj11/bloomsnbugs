@@ -17,6 +17,10 @@ const Sidebar = () => {
           {" "}
           <Link to="/accessories">Accessories</Link>
         </li>
+        <li className="SidebarItems">
+          {" "}
+          <a href="https://www.etsy.com/shop/BloomsNBugs#reviews">Reviews</a>
+        </li>
       </ul>
     </div>
   );
