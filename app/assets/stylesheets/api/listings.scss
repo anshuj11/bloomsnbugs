@@ -77,3 +77,36 @@
 .Price {
   font-weight: bold;
 }
+.ListingFormPage {
+  // border: 1px grey solid;
+  width: 50%;
+  height: 700px;
+  justify-self: center;
+  margin: 50px 200px 50px 200px;
+  justify-content: center;
+}
+
+.ListingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.InputField {
+  width: 350px;
+  height: 30px;
+  margin: 10px 0 10px 10px;
+}
+.InputFieldTextArea {
+  width: 400px;
+  height: 200px;
+  margin: 10px 0 10px 10px;
+}
+.Label {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.InputAndLabel {
+  display: flex;
+  align-items: center;
+}

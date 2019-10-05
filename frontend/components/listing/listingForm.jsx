@@ -46,27 +46,63 @@ class ListingForm extends React.Component {
       <img src={this.state.photoUrl} className="ListingImage" />
     ) : null;
     return (
-      <form name="listingForm">
-        <label name="Listing Title">
-          <input type="text" onChange={this.handleChange("title")}></input>
-        </label>
-        <label name="Description">
-          <input
-            type="textarea"
-            onChange={this.handleChange("description")}
-          ></input>
-        </label>
-        <label name="Price">
-          <input type="text" onChange={this.handleChange("price")}></input>
-        </label>
-        <label name="Photo">
-          <input type="file" onChange={this.handleFile.bind(this)}></input>
-        </label>
-        {preview}
-        <button onClick={this.handleSubmit} className="SessionButton">
-          Publish
-        </button>
-      </form>
+      <div className="ListingFormPage">
+        <form name="listingForm" className="ListingForm">
+          <div>
+            <div className="Label" className="InputAndLabel">
+              <div className="Label">Title</div>
+
+              <label name="Listing Title">
+                <input
+                  type="text"
+                  onChange={this.handleChange("title")}
+                  className="InputField"
+                ></input>
+              </label>
+            </div>
+          </div>
+          <div>
+            <label name="Price" className="InputAndLabel">
+              <div className="Label">Price</div>
+              <input
+                type="text"
+                onChange={this.handleChange("price")}
+                className="InputField"
+              ></input>
+            </label>
+          </div>
+          <div>
+            <div className="Label">
+              <div className="Label">Description</div>
+
+              <label name="Description">
+                <input
+                  type="textarea"
+                  onChange={this.handleChange("description")}
+                  className="InputFieldTextArea"
+                ></input>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <div className="Label" className="InputAndLabel">
+              <div className="Label">Photo</div>
+              <label name="Photo">
+                <input
+                  type="file"
+                  onChange={this.handleFile.bind(this)}
+                  className="InputField"
+                ></input>
+              </label>
+            </div>
+          </div>
+          {preview}
+          <button onClick={this.handleSubmit} className="SessionButton">
+            Publish
+          </button>
+        </form>
+      </div>
     );
   }
 }
