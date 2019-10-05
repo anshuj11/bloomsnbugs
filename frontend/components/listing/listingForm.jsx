@@ -72,17 +72,16 @@ class ListingForm extends React.Component {
             </label>
           </div>
           <div>
-            <div className="Label">
-              <div className="Label">Description</div>
+            {/* <div className="InputAndLabel"> */}
+            <div className="Label">Description</div>
 
-              <label name="Description">
-                <input
-                  type="textarea"
-                  onChange={this.handleChange("description")}
-                  className="InputFieldTextArea"
-                ></input>
-              </label>
-            </div>
+            {/* <label name="Description"> */}
+            <textarea
+              onChange={this.handleChange("description")}
+              className="InputFieldTextArea"
+            ></textarea>
+            {/* </label> */}
+            {/* </div> */}
           </div>
 
           <div>
