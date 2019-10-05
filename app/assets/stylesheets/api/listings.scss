@@ -2,27 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// .ListingsGrid {
+//   display: grid;
+//   grid-template-columns: 25% 25% 25% 25%;
+//   grid-template-rows: 33% 33% 33%;
+//   width: 100%;
+// }
 .ListingsGrid {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 33% 33% 33%;
+  margin-right: auto;
+  margin-left: auto;
   width: 100%;
+  margin-top: 10px;
+}
+
+.home-pin-wrap {
+  /* width: 240px; */
+  border-radius: 30px;
+  margin: 10px 10px;
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.4));
+  transition: filter 0.25s ease-in-out;
+}
+.home-pin-wrap:hover {
+  filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.6));
 }
 
 .Listing {
   display: flex;
   flex-direction: column;
-  min-width: 175px;
-  min-height: 175px;
+  min-width: 250px;
+  min-height: 250px;
   border: none;
-  margin: 20px 20px 40px 20px;
-  border-radius: 8px;
+  margin: 30px 30px 30px 30px;
+  border-radius: 30px;
 }
 
 .ListingImage {
-  width: 175px;
-  border-radius: 8px;
-  height: 175px;
+  width: 250px;
+  border-radius: 30px;
+  height: 250px;
+}
+
+.home-pin-wrap:hover > .ListingImage {
+  filter: brightness(0.6);
+  cursor: zoom-in;
 }
 
 .ListingImageBig {
@@ -109,4 +131,8 @@
 .InputAndLabel {
   display: flex;
   align-items: center;
+}
+
+.home-masonry {
+  margin: 0 auto;
 }

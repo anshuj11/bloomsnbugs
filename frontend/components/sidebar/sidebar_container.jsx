@@ -25,7 +25,7 @@ const Sidebar = () => {
         </li>
         <li className="SidebarItems">
           {" "}
-          <a href="https://www.etsy.com/shop/BloomsNBugs#reviews">
+          <a href="https://www.etsy.com/shop/BloomsNBugs\?#reviews">
             <div className="SidebarText">Reviews</div>
           </a>
         </li>

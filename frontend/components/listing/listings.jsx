@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../sidebar/sidebar_container";
+import Masonry from "react-masonry-component";
+
+const masonryOptions = {
+  transitionDuration: 650,
+  itemSelector: ".home-pin-wrap",
+  columnWidth: 270,
+  fitWidth: true
+};
 
 class Listings extends React.Component {
   constructor(props) {
@@ -12,6 +20,7 @@ class Listings extends React.Component {
   render() {
     const listings_arr = Object.keys(this.props.listings).map(id => (
       <li key={id} className="Listing">
+        <div className="home-pin-wrap" >
         {/* {this.props.listings[id].title} */}
         <Link to={`/listings/${id}`}>
           <img
@@ -21,12 +30,23 @@ class Listings extends React.Component {
         </Link>
         <br />
         <Link to={`/listings/${id}`}>{this.props.listings[id].title}</Link>
+        </div>
       </li>
     ));
     return (
       <div className= "MainPage">
         <Sidebar/>
-        <ul className="ListingsGrid">{listings_arr}</ul>
+        <ul className="ListingsGrid">
+          <Masonry
+          className="home-masonry"
+          elementType="div"
+          updateOnEachImageLoad={true}
+          options={masonryOptions}
+          >
+            {listings_arr}
+            </Masonry>
+            
+            </ul>
       </div>
     );
   }
