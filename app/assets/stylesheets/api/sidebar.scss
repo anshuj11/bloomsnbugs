@@ -2,14 +2,57 @@
   display: flex;
   width: 200px;
   height: 800px;
-  background-color: peachpuff;
+  //background-color: peachpuff;
   z-index: 100;
+}
+ul {
+  width: 100%;
+}
+ul.column {
+  float: left;
+  padding: 0;
+  list-style: none;
+  width: 675px;
+  padding: 10px;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
+ul.column .SidebarItems {
+  background: #fff;
+  float: left;
+  margin: 10px 0 0 10px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  padding: 0;
+  border-radius: 2px 2px 2px 2px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .SidebarItems {
   list-style: none;
   height: 50px;
+  width: 150px;
   font-size: 24px;
+  font-style: none;
+  text-decoration: none;
+  margin: 10px 0;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  align-items: center;
+}
+.SidebarText {
+  margin: 20px;
 }
 
 .MainPage {
@@ -21,5 +64,5 @@
 }
 
 .TextSpace {
-  padding: 50px;
+  padding: 10px;
 }
