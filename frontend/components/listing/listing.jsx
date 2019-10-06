@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { requestListing } from "../../actions/listing_actions";
 import { addToCart } from "../../actions/cart_actions";
+import Sidebar from "../sidebar/sidebar_container";
 
 class Listing extends React.Component {
   constructor(props) {
@@ -17,13 +18,14 @@ class Listing extends React.Component {
   render() {
     return (
       <div className="ListingBox">
+        <Sidebar />
         <img src={this.props.listing.photoUrl} className="ListingImageBig" />
         <div className="ListingDetails">
           <div className="Price">Price: ${this.props.listing.price}</div>
           <button className="CartButton" onClick={this.handleClick.bind(this)}>
             Add to Cart
           </button>
-          <p className="fas fa-heart" ></p>
+          <p className="fas fa-heart"></p>
           <Link to="/">Browse Listings</Link>
           <div>{this.props.listing.description}</div>
         </div>
