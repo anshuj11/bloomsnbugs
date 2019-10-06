@@ -24,4 +24,4 @@ export const removeListingFromCart = idx => {
 
 export const getCart = () => dispatch => dispatch(fetchCart());
 export const addToCart = listing => dispatch(addListingToCart(listing));
-export const removeFromCart = idx => dispatch(removeListingFromCart(idx));
+export const removeFromCart = idx => removeListingFromCart(idx);

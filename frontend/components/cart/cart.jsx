@@ -13,7 +13,7 @@ class Cart extends React.Component {
   handleClick(e, idx) {
     e.preventDefault();
     debugger;
-    console.log("Props: ", this.props);
+    console.log("Props Sundae: ", this.props);
     this.props.removeFromCart(idx);
   }
   render() {
@@ -48,7 +48,9 @@ const msp = ({ entities }) => {
 const mdp = dispatch => {
   return {
     getCart: () => dispatch(getCart()),
-    removeFromCart: idx => dispatch(removeFromCart(idx))
+    removeFromCart: idx => {
+      dispatch(removeFromCart(idx));
+    }
   };
 };
 export default connect(

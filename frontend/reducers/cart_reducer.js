@@ -1,4 +1,8 @@
-import { ADD_TO_CART, GET_CART, REMOVE_FROM_CART } from "../actions/cart_actions";
+import {
+  ADD_TO_CART,
+  GET_CART,
+  REMOVE_FROM_CART
+} from "../actions/cart_actions";
 
 const cartReducer = (state = [], action) => {
   Object.freeze(state);
