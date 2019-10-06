@@ -32,6 +32,7 @@ const Greeting = props => {
       </div>
     );
   } else {
+    debugger;
     return (
       <div>
         <div className="Navbar">
@@ -52,7 +53,13 @@ const Greeting = props => {
             >
               Demo
             </button>
-            <i className="fas fa-shopping-cart"></i>
+            <div className="Cart">
+              <div className="Notification">
+                {props.itemsInCart ? props.itemsInCart : 0}
+              </div>
+              {/* <i className="fas fa-shopping-cart"></i> */}
+              <Link to="/cart" className="fas fa-shopping-cart"></Link>
+            </div>
           </div>
         </div>
       </div>

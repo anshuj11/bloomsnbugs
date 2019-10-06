@@ -2,12 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .ListingsGrid {
-//   display: grid;
-//   grid-template-columns: 25% 25% 25% 25%;
-//   grid-template-rows: 33% 33% 33%;
-//   width: 100%;
-// }
+
 .ListingsGrid {
   margin-right: auto;
   margin-left: auto;
@@ -103,9 +98,9 @@
   // border: 1px grey solid;
   width: 50%;
   height: 700px;
-  justify-self: center;
+  //ustify-self: center;
   margin: 50px 200px 50px 200px;
-  justify-content: center;
+  //justify-content: center;
 }
 
 .ListingForm {
@@ -125,6 +120,8 @@
   height: 200px;
   margin: 10px 0 10px 10px;
   font-size: 20px;
+  word-wrap: normal;
+  text-align: left;
 }
 .Label {
   font-family: "Times New Roman", Times, serif;

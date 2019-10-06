@@ -49,7 +49,7 @@ class ListingForm extends React.Component {
       <div className="ListingFormPage">
         <form name="listingForm" className="ListingForm">
           <div>
-            <div className="Label" className="InputAndLabel">
+            <div className="InputAndLabel">
               <div className="Label">Title</div>
 
               <label name="Listing Title">
@@ -79,6 +79,8 @@ class ListingForm extends React.Component {
             <textarea
               onChange={this.handleChange("description")}
               className="InputFieldTextArea"
+              cols="19"
+              rows="4"
             ></textarea>
             {/* </label> */}
             {/* </div> */}

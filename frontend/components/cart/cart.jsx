@@ -1,13 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getCart } from "../../actions/cart_actions";
+import { getCart, removeFromCart } from "../../actions/cart_actions";
 
 class Cart extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
     this.props.getCart();
+  }
+  handleClick(e, idx) {
+    e.preventDefault();
+    debugger;
+    console.log("Props: ", this.props);
+    this.props.removeFromCart(idx);
   }
   render() {
     let total = 0;
@@ -17,6 +24,7 @@ class Cart extends React.Component {
         <div className="Item">
           <div className="ItemTitle">{item.title} </div>
           <div className="ItemPrice">${item.price} </div>
+          <button onClick={e => this.handleClick(e, idx)}>Remove</button>
         </div>
       </li>
     ));
@@ -38,7 +46,10 @@ const msp = ({ entities }) => {
 };
 
 const mdp = dispatch => {
-  return { getCart: () => dispatch(getCart()) };
+  return {
+    getCart: () => dispatch(getCart()),
+    removeFromCart: idx => dispatch(removeFromCart(idx))
+  };
 };
 export default connect(
   msp,
