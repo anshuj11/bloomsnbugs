@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getCart, removeFromCart } from "../../actions/cart_actions";
+import Sidebar from "../sidebar/sidebar_container";
 
 class Cart extends React.Component {
   constructor(props) {
@@ -29,11 +30,14 @@ class Cart extends React.Component {
       </li>
     ));
     return (
+      <div className="CartPage">
+      <Sidebar/>
       <div className="Bill">
         <ul className="ItemsList">{newArr}</ul>
         <hr></hr>
         <div className="CartTotal"> Total: ${total}</div>
         <button className="DisabledButton">Buy</button>
+        </div>
       </div>
     );
   }
