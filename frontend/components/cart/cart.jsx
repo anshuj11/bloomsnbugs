@@ -13,8 +13,6 @@ class Cart extends React.Component {
   }
   handleClick(e, idx) {
     e.preventDefault();
-    debugger;
-    console.log("Props Sundae: ", this.props);
     this.props.removeFromCart(idx);
   }
   render() {

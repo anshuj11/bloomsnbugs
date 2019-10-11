@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { requestListing } from "../../actions/listing_actions";
 import { addToCart } from "../../actions/cart_actions";
+import Like from "../like/likes";
 
 class Listing extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Listing extends React.Component {
           <button className="CartButton" onClick={this.handleClick.bind(this)}>
             Add to Cart
           </button>
-          <p className="fas fa-heart" ></p>
+          <Like listing_id={this.props.match.params.id}/>
           <Link to="/">Browse Listings</Link>
           <div>{this.props.listing.description}</div>
         </div>
@@ -39,7 +40,9 @@ const msp = ({ entities }, ownProps) => {
 };
 
 const mdp = dispatch => {
-  return { getListing: id => dispatch(requestListing(id)) };
+  return {
+    getListing: id => dispatch(requestListing(id))
+  };
 };
 export default connect(
   msp,

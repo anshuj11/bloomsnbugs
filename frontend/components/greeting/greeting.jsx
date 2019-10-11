@@ -32,7 +32,6 @@ const Greeting = props => {
       </div>
     );
   } else {
-    debugger;
     return (
       <div>
         <div className="Navbar">
