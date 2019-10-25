@@ -24,7 +24,7 @@ class Listing extends React.Component {
           <button className="CartButton" onClick={this.handleClick.bind(this)}>
             Add to Cart
           </button>
-          <Like listing_id={this.props.match.params.id}/>
+          {/* <Like listing_id={this.props.match.params.id}/> */}
           <Link to="/">Browse Listings</Link>
           <div>{this.props.listing.description}</div>
         </div>

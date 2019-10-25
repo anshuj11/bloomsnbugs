@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .ListingsGrid {
   margin-right: auto;
   margin-left: auto;
@@ -86,7 +85,9 @@
   padding: 0px;
   color: grey;
 }
-
+.fa-heart:visited {
+  color: red;
+}
 .fa-heart:active {
   color: red;
 }

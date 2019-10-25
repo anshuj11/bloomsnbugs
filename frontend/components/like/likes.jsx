@@ -3,6 +3,7 @@ import { requestAllLikes, createLike } from "../../actions/like_actions";
 import { connect } from "react-redux";
 
 const msp = ({ entities, session }, ownProps) => {
+  //, ownProps) => {
   debugger;
   return {
     likes: entities.likes,
@@ -14,7 +15,7 @@ const msp = ({ entities, session }, ownProps) => {
 const mdp = dispatch => {
   return {
     getLikes: () => dispatch(requestAllLikes()),
-    removeLike: id => dispatch(removeLike(id)),
+    // removeLike: id => dispatch(removeLike(id)),
     createLike: like => dispatch(createLike(like))
   };
 };
