@@ -19,6 +19,7 @@ a:-webkit-any-link {
   color: -webkit-link;
   cursor: pointer;
   text-decoration: none;
+  color: #595959;
 }
 ul.column .SidebarItems {
   background: #fff;
@@ -52,11 +53,14 @@ ul.column .SidebarItems {
   align-items: center;
 }
 .SidebarText {
-  margin: 20px;
+  margin: 12px;
+  font-family: "Roboto", sans-serif;
 }
-
+  
 .MainPage {
   display: flex;
+  margin-top: 20px;
+  padding-top: 10px;
 }
 
 .StandardText {
