@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Sidebar from "../sidebar/sidebar_container";
+import Catbar from "../catbar/catbar";
 
 const Greeting = props => {
   if (props.currentUser) {
@@ -29,6 +29,7 @@ const Greeting = props => {
             </div>
           </div>
         </div>
+        <Catbar />
       </div>
     );
   } else {
@@ -60,6 +61,7 @@ const Greeting = props => {
             </div>
           </div>
         </div>
+        <Catbar />
       </div>
     );
   }

@@ -35,7 +35,6 @@ class Listings extends React.Component {
     ));
     return (
       <div className="MainPage">
-        <Sidebar />
         <div className="subTextAndPics">
           <div className="subText">Beautiful, unique, handmade in USA</div>
           <ul className="ListingsGrid">
