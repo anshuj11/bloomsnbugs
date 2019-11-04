@@ -9,7 +9,7 @@ const Greeting = props => {
         <div className="Navbar">
           <div className="HeaderText">
             <h1 className="Header">Blooms And Bugs </h1>
-            <h2>Welcome {props.currentUser.email} </h2>
+            <div classname="Greeting">Welcome {props.currentUser.email} </div>
           </div>
           <div className="LoginSignUpLinks">
             <Link to="/listing/new" className="Links">
