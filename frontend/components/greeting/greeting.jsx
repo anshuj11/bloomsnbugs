@@ -37,7 +37,6 @@ const Greeting = props => {
         <div className="Navbar">
           <div className="HeaderText">
             <h1 className="Header">Blooms And Bugs </h1>
-            <h2 className="Byline">Beautiful, unique, handmade in USA </h2>
           </div>
           <div className="LoginSignUpLinks">
             <Link to="/login" className="Links">

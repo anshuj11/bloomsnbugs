@@ -2,7 +2,6 @@
   display: flex;
   width: 200px;
   height: 800px;
-  //background-color: peachpuff;
   z-index: 100;
 }
 ul {
@@ -56,11 +55,12 @@ ul.column .SidebarItems {
   margin: 12px;
   font-family: "Roboto", sans-serif;
 }
-  
+
 .MainPage {
   display: flex;
   margin-top: 20px;
   padding-top: 10px;
+  width: 100%;
 }
 
 .StandardText {

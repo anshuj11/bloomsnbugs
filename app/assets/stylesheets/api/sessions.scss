@@ -25,13 +25,13 @@
 }
 
 .SessionButton {
-  background-color: orangered;
+  background-color: #f1641e !important;
   width: 100px;
   height: 40px;
   color: white;
-  align-content: center;
-  margin: 20px 20px 5px 20px;
-  font-size: 20px;
+  align-content: flex-start;
+  // margin: 20px 20px 5px 20px;
+  font-size: 14px;
   border-radius: 5px;
 }
 
@@ -41,56 +41,86 @@
 }
 
 .LoginSignUpLinks {
-  width: 50%;
+  width: 20%;
   height: 80px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 .Links {
-  margin: 20px 20px 5px 20px;
-  font-size: 20px;
+  // margin: 20px 20px 5px 20px;
+  //font-size: 20px;
+  align-items: flex-start;
   color: grey;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 .Navbar {
   width: 100%;
   height: 100px;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: white;
   border-bottom: 2px solid rgba(34, 34, 34, 0.15);
-  margin: 10px;
   padding: 10px;
 }
 .HeaderText {
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
-  color: orangered;
+  color: #f1641e !important;
   margin: 0px;
   padding-bottom: 0px;
   //justify-content: center;
 }
+.subText {
+  font-family: "Lora", serif;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  color: #222;
+  width: 100%;
+  padding: 0px 12px 12px;
+  // justify-items: center;
+  // align-items: center;
+  // justify-content: center;
+  // align-self: center;
+  // justify-self: center;
+  text-align: center;
+  //text-justify: center;
+  //align-items: center;
+}
+.subTextAndPics {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // justify-items: center;
+  // align-items: center;
+  // align-content: center;
+}
 .Header {
-  color: orangered;
+  color: #f1641e !important;
   font-size: 40px;
   margin: 0px;
   padding: 0px;
   font-family: "times-new-roman";
+  font-weight: 300;
 }
 
 .fa-shopping-cart {
-  font-size: 30px;
+  align-content: flex-start;
+  font-size: 20px;
   margin: 0px;
   padding: 0px;
 }
 
 .Notification {
-  padding: 5px 10px;
+  padding: 2px 5px;
   border-radius: 50%;
-  background: orangered;
+  background: #f1641e !important;
   color: white;
   margin: 0px;
 }
